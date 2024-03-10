@@ -131,16 +131,18 @@ blockquote {
 }
 .banner__partieTextes {
     position: absolute;
-    top: 150px;
+    top: 100px;
     left: 100px;
     width: 350px;
 }
 .banner__description {
     color: #68A47F;
     font-style: italic;
+    font-weight: bold;
     font-size:30px;
 }
 .banner__titre {
+    font-family: "Roboto", Arial, sans-serif;
     color: #274C5B;
     font-weight: bold;
     font-size: 60px;
