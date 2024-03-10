@@ -212,3 +212,39 @@ img {
     font-weight: bold;
     font-size: 20px;
 }
+
+
+/*Promotions*/
+.promotionsList {
+    padding: 60px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.promotion {
+    position: relative;
+    width: 600px;
+    padding: 0 10px;
+}
+.promotion__img {
+    border-radius: 20px;
+    max-width: 100%;
+}
+.promotion__partieTextes {
+    position: absolute;
+    top: 10px;
+    left: 50px;
+    width: 350px;
+}
+.promotion__description {
+    color: #274C5B;
+    font-style: italic;
+    font-weight: bold;
+    font-size:40px;
+}
+.promotion__titre {
+    font-family: "Roboto", Arial, sans-serif;
+    color: #274C5B;
+    font-weight: bold;
+    font-size: 30px;
+}

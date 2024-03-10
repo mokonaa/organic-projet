@@ -140,6 +140,159 @@ add_action('customize_register', 'newsletter_customize');
     add_action('customize_register', 'banner_customize');
 
 
+    // PROMOTIONS EDITING
+    function promotions_customize($wp_customize) {
+
+        $wp_customize->add_section('promotions', array(
+            'title' => __('Promotions', 'custom'),
+            'description' => 'Here you can change promotions options',
+            'priority' => 30,
+            'capability' => 'edit_theme_options'
+        ));
+
+
+        // Promo 1
+        $wp_customize->add_setting('promotion_image0', array(
+            'default' => '',
+            'type' => 'theme_mod',
+            'capability' => 'edit_theme_options'
+        ));
+
+        $wp_customize->add_setting('promotion_title0', array(
+            'default' => '',
+            'type' => 'theme_mod',
+            'capability' => 'edit_theme_options'
+        ));
+
+        $wp_customize->add_setting('promotion_desc0', array(
+            'default' => '',
+            'type' => 'theme_mod',
+            'capability' => 'edit_theme_options'
+        ));
+
+        $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'promotion_image0', array(
+            'label' => __('Promotion 1 Image', 'custom'),
+            'description' => 'Promotion image has to be in gif, png, jpg.',
+            'section' => 'promotions',
+        )));
+        $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'promotion_title0', array(
+            'label' => __('Promotion 1 Title', 'custom'),
+            'description' => 'Promotion Title must be valid.',
+            'section' => 'promotions',
+        )));
+        $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'promotion_desc0', array(
+            'label' => __('Promotion 1 Description', 'custom'),
+            'description' => 'Promotion Description must be valid.',
+            'section' => 'promotions',
+        )));
+
+
+
+
+
+
+        // Promo 2
+        $wp_customize->add_setting('promotion_image1', array(
+            'default' => '',
+            'type' => 'theme_mod',
+            'capability' => 'edit_theme_options'
+        ));
+
+        $wp_customize->add_setting('promotion_title1', array(
+            'default' => '',
+            'type' => 'theme_mod',
+            'capability' => 'edit_theme_options'
+        ));
+
+        $wp_customize->add_setting('promotion_desc1', array(
+            'default' => '',
+            'type' => 'theme_mod',
+            'capability' => 'edit_theme_options'
+        ));
+
+        $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'promotion_image1', array(
+            'label' => __('Promotion 2 Image', 'custom'),
+            'description' => 'Promotion image has to be in gif, png, jpg.',
+            'section' => 'promotions',
+        )));
+        $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'promotion_title1', array(
+            'label' => __('Promotion 2 Title', 'custom'),
+            'description' => 'Promotion Title must be valid.',
+            'section' => 'promotions',
+        )));
+        $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'promotion_desc1', array(
+            'label' => __('Promotion 2 Description', 'custom'),
+            'description' => 'Promotion Description must be valid.',
+            'section' => 'promotions',
+        )));
+
+
+
+        /*
+        for ($i=0; $i<2; $i++) {
+            $wp_customize->add_setting('promotion_image'.$i, array(
+                'default' => '',
+                'type' => 'theme_mod',
+                'capability' => 'edit_theme_options'
+            ));
+    
+            $wp_customize->add_setting('promotion_title'.$i, array(
+                'default' => '',
+                'type' => 'theme_mod',
+                'capability' => 'edit_theme_options'
+            ));
+    
+            $wp_customize->add_setting('promotion_desc'.$i, array(
+                'default' => '',
+                'type' => 'theme_mod',
+                'capability' => 'edit_theme_options'
+            ));
+    
+            $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'promotion_image'.$i, array(
+                'label' => __('Promotion Image', 'custom'),
+                'description' => 'Promotion image has to be in gif, png, jpg.',
+                'section' => 'promotions',
+            )));
+            $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'promotion_title'.$i, array(
+                'label' => __('Promotion Title', 'custom'),
+                'description' => 'Promotion Title must be valid.',
+                'section' => 'promotions',
+            )));
+            $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'promotion_desc'.$i, array(
+                'label' => __('Promotion Description', 'custom'),
+                'description' => 'Promotion Description must be valid.',
+                'section' => 'promotions',
+            )));
+        }//*/
+    }
+    add_action('customize_register', 'promotions_customize');
+    
+
+    function mytheme_customize_register( $wp_customize ) {
+        //All our sections, settings, and controls will be added here
+        $wp_customize->add_setting( 'header_textcolor' , array(
+            'default'     => "#ffebce",
+            'transport'   => 'refresh',
+        ) );
+
+        $wp_customize->add_setting( 'footer_textcolor' , array(
+            'default'     => "#ffebce",
+            'transport'   => 'refresh',
+        ) );
+    
+        $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'header_textcolor', array(
+            'label'        => __( 'Header Color', 'mytheme' ),
+            'section'    => 'colors',
+        ) ) );
+
+        $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'footer_textcolor', array(
+            'label'        => __( 'Footer Color', 'mytheme' ),
+            'section'    => 'colors',
+        ) ) );
+    }
+    add_action( 'customize_register', 'mytheme_customize_register' );
+
+
     add_theme_support( 'custom-logo');
 
 
