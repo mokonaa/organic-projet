@@ -182,3 +182,39 @@ img {
     height: 100%;
     object-fit: cover;
 }
+
+/*Banner*/
+.banner {
+    position: relative;
+}
+.banner__img {
+    max-width: 100%;
+}
+.banner__partieTextes {
+    position: absolute;
+    top: 150px;
+    left: 100px;
+    width: 350px;
+}
+.banner__description {
+    color: #68A47F;
+    font-style: italic;
+    font-size:30px;
+}
+.banner__titre {
+    color: #274C5B;
+    font-weight: bold;
+    font-size: 60px;
+}
+.banner__button {
+    background-color: #EFD372;
+    color: #274C5B;
+    border: none;
+    padding: 21px;
+    border-radius: 7px;
+}
+.banner__buttonUrl {
+    text-decoration: none;
+    color: #274C5B;
+    font-weight: bold;
+    font-size: 20px;

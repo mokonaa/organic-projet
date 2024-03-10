@@ -1,4 +1,6 @@
-<?php get_header() ?>
 
+ <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>"> <!-- mettre ça dans le header et enlever cette ligne-->
 
-<?php get_footer() ?>
+<?php
+    include "banner.php"; // inclure dans home seulement 
+?>
