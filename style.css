@@ -1,0 +1,122 @@
+/*
+Theme Name:  Organick
+Author: 
+Author URI: https://wordpress.org/
+Description: Our default theme for 2020 is designed to take full advantage of the flexibility of the block editor. Organizations and businesses have the ability to create dynamic landing pages with endless layouts using the group and column blocks. The centered content column and fine-tuned typography also makes it perfect for traditional blogs. Complete editor styles give you a good idea of what your content will look like, even before you publish. You can give your site a personal touch by changing the background colors and the accent color in the Customizer. The colors of all elements on your site are automatically calculated based on the colors you pick, ensuring a high, accessible color contrast for your visitors.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@400;500;700;900&display=swap');
+
+:root {
+    /* couleurs */
+    --clr-bleu-canard: #274C5B;
+    --clr-vert: #7EB693;
+    --clr-jaune: #EFD372;
+    --clr-gris-clair: #D4D4D4;
+    --clr-blanc-fonce: #F9F8F8;
+    --clr-vert-clair: #EFF6F1;
+    --clr-gris: #525C60;
+    --clr-blanc: #fff;
+    --clr-noir: #000;
+
+    /* fonts */
+    --ff-title: 'Roboto', sans-serif;
+    --ff-body: 'Open Sans', sans-serif;
+
+    --h1-size: 70px;
+    --h2-size: 50px;
+    --h3-size: 40px;
+    --h4-size: 35px;
+    --h5-size: 30px;
+    --h6-size: 25px;
+
+    /* graisseur */
+    --fw-800: 800; /* extra-bold */
+    --fw-700: 700; /* bold */
+    --fw-500: 500; /* medium */
+    --fw-400: 400; /* regular */
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* À modifier avec les classes ?? à en discuter, il faut ajuster pour que ce système fonctionne bien */
+h1, h2, h3, h4, h5, h6 {
+    /* --_main-color: var(--main-color, --clr-bleu-canard);
+    --_fw-extra-bold: var(--fw-extra-bold, --fw-800); */
+
+    color: var(--clr-bleu-canard);
+    font-weight: var(--fw-800);
+} 
+
+p, li {
+    color: var(--clr-bleu-canard);
+    font-weight: var(--fw-400);
+    font-family: var(--ff-body);
+}
+
+ol li::marker {
+    font-weight: var(--fw-700);
+}
+
+blockquote {
+    background-color: #F1EDEA;
+    font-weight: var(--fw-700);
+    color: var(--clr-bleu-canard);
+    font-family: var(--ff-body);
+    border-radius: 30px;
+    padding: 59px 69px;
+}
+.button-container-test {
+    padding-block: 2rem;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+}
+.button {
+    /* --_background-color: var(--background-color, --clr-bleu-canard);
+    --_color: var(--color, --clr-blanc);
+    --_border-color: var(--border-color, var(--clr-bleu-canard)); */
+    margin: auto;
+    width: auto;
+    margin: auto;
+    font-family: var(--ff-title);
+    padding: 28px 39px;
+    border-radius: 1rem;
+    border: 1px solid var(--clr-bleu-canard);
+    text-decoration: none;
+    background-color: var(--clr-bleu-canard);
+    color: var(--clr-blanc);
+    border-color: var(--clr-bleu-canard);
+    font-size: 20px;
+    font-weight: var(--fw-500);
+}
+.button--blue::after,.button--yellow::after,.button--white::after {
+    content: url("data:image/svg+xml,%3Csvg width='9' height='8' viewBox='0 0 9 8' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M4.47641 1.12891L7.87095 4.19342L4.47641 7.25794M7.39949 4.19342H0.516113' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E ");
+    margin-left: 10px;
+    background-color: #335B6B;
+    border-radius: 100%;
+    padding: 1px 10px 5px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.button.button--blue, .button.button--pagination {
+    color: var(--clr-blanc);
+    background-color: var(--clr-bleu-canard);
+}
+.button.button--yellow {
+    color: var(--clr-bleu-canard);
+    background-color: var(--clr-jaune);
+    border-color: var(--clr-jaune)
+}
+.button.button--white {
+    color: var(--clr-bleu-canard);
+    background: none;
+}
