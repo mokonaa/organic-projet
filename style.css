@@ -23,8 +23,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     --clr-noir: #000;
 
     /* fonts */
-    --ff-title: 'Roboto', sans-serif;
-    --ff-body: 'Open Sans', sans-serif;
+    --ff-title: 'Roboto';
+    --ff-body: 'Open Sans';
 
     --h1-size: 70px;
     --h2-size: 50px;
@@ -51,8 +51,8 @@ h1, h2, h3, h4, h5, h6 {
     /* --_main-color: var(--main-color, --clr-bleu-canard);
     --_fw-extra-bold: var(--fw-extra-bold, --fw-800); */
 
-    color: var(--clr-bleu-canard);
     font-weight: var(--fw-800);
+    font-family: var(--ff-title);
 } 
 
 p, li {
@@ -96,6 +96,7 @@ blockquote {
     border-color: var(--clr-bleu-canard);
     font-size: 20px;
     font-weight: var(--fw-500);
+    cursor: pointer;
 }
 .button--blue::after,.button--yellow::after,.button--white::after {
     content: url("data:image/svg+xml,%3Csvg width='9' height='8' viewBox='0 0 9 8' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M4.47641 1.12891L7.87095 4.19342L4.47641 7.25794M7.39949 4.19342H0.516113' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E ");
@@ -119,4 +120,64 @@ blockquote {
 .button.button--white {
     color: var(--clr-bleu-canard);
     background: none;
+}
+
+.newsletter {
+    max-width: 85%;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    height: 323px;
+    border-radius: 30px;
+}
+
+.newsletter__text {
+    padding: 105px 71px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    align-items: center;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+}
+
+.newsletter__picture {
+    width: 100%;
+}
+.newsletter__picture img {
+    border-radius: 30px;
+}
+.newsletter__title {
+    width: 400px;
+    font-size: 50px;
+    font-weight: var(--fw-800);
+}
+
+.newsletter__form {
+    display: flex;
+    gap: 1rem;
+    width: 40%;
+}
+
+.newsletter__form input {
+    padding: 28px 23px;
+    border-radius: 1rem;
+    border: 1px solid #ABABAB;
+    width: 100%;
+}
+
+.newsletter__form input::placeholder {
+    font-style: italic;
+    color:#ABABAB;
+}
+
+
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

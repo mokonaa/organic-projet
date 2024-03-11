@@ -13,9 +13,11 @@
 
 <body>
     <main>
-        <div class="button-container-test">
-            <a href="" class="button button--white">Hello</a>
-        </div>
-        <blockquote>“The first rule of any organic used in a business is that nature applied to an efficient operation will magnify the efficiency. The second is that organic applied to an inefficient operation will magnify the health.”</blockquote>
+        <section>
+            <?php if (is_front_page()) { ?>
+                
+            <?php } ?>
+            </div>
+        </section>
     </main>
 </body>
