@@ -212,3 +212,62 @@ img {
     font-weight: bold;
     font-size: 20px;
 }
+.newsletter {
+    max-width: 85%;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    height: 323px;
+    border-radius: 30px;
+}
+
+.newsletter__text {
+    padding: 105px 71px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    align-items: center;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+}
+
+.newsletter__picture {
+    width: 100%;
+}
+.newsletter__picture img {
+    border-radius: 30px;
+}
+.newsletter__title {
+    width: 400px;
+    font-size: 50px;
+    font-weight: var(--fw-800);
+}
+
+.newsletter__form {
+    display: flex;
+    gap: 1rem;
+    width: 40%;
+}
+
+.newsletter__form input {
+    padding: 28px 23px;
+    border-radius: 1rem;
+    border: 1px solid #ABABAB;
+    width: 100%;
+}
+
+.newsletter__form input::placeholder {
+    font-style: italic;
+    color:#ABABAB;
+}
+
+
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
