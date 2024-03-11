@@ -70,13 +70,6 @@ add_action('customize_register', 'newsletter_customize');
     add_action( 'after_setup_theme', 'register_navwalker' );
 
 
-    // REGISTER NEW MENU
-    function my_menu () {
-        register_nav_menu('primary', _('Menu Principal'));
-    }
-    add_action('init', 'my_menu');
-
-
     // BANNER EDITING
     function banner_customize($wp_customize) {
 
@@ -145,31 +138,6 @@ add_action('customize_register', 'newsletter_customize');
         )));
     }
     add_action('customize_register', 'banner_customize');
-
-
-    function mytheme_customize_register( $wp_customize ) {
-        //All our sections, settings, and controls will be added here
-        $wp_customize->add_setting( 'header_textcolor' , array(
-            'default'     => "#ffebce",
-            'transport'   => 'refresh',
-        ) );
-
-        $wp_customize->add_setting( 'footer_textcolor' , array(
-            'default'     => "#ffebce",
-            'transport'   => 'refresh',
-        ) );
-    
-        $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'header_textcolor', array(
-            'label'        => __( 'Header Color', 'mytheme' ),
-            'section'    => 'colors',
-        ) ) );
-
-        $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'footer_textcolor', array(
-            'label'        => __( 'Footer Color', 'mytheme' ),
-            'section'    => 'colors',
-        ) ) );
-    }
-    add_action( 'customize_register', 'mytheme_customize_register' );
 
 
     add_theme_support( 'custom-logo');
