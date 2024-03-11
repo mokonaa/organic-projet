@@ -120,3 +120,36 @@ blockquote {
     color: var(--clr-bleu-canard);
     background: none;
 }
+
+
+/*Banner*/
+.banner {
+    position: relative;
+}
+.banner__img {
+    max-width: 100%;
+}
+.banner__partieTextes {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 400px;
+}
+.banner__description {
+    color: var(--clr-vert);
+    font-style: italic;
+    font-weight: bold;
+    font-size:30px;
+}
+.banner__titre {
+    font-family: var(--ff-title);
+    font-size: var(--h1-size);
+    margin: 25px 0;
+}
+
+.banner__buttonUrl {
+    text-decoration: none;
+    color: var(--clr-bleu-canard);
+    font-weight: bold;
+    font-size: 20px;
+}
