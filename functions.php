@@ -93,6 +93,12 @@ add_action('customize_register', 'newsletter_customize');
             'capability' => 'edit_theme_options'
         ));
 
+        $wp_customize->add_setting('banner_urlTxt', array(
+            'default' => '',
+            'type' => 'theme_mod',
+            'capability' => 'edit_theme_options'
+        ));
+
         $wp_customize->add_setting('banner_url', array(
             'default' => '',
             'type' => 'theme_mod',
@@ -110,16 +116,8 @@ add_action('customize_register', 'newsletter_customize');
             'type' => 'theme_mod',
             'capability' => 'edit_theme_options'
         ));
-        $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'banner_image', array(
-            'label' => __('Banner Image', 'custom'),
-            'description' => 'Banner image has to be in gif, png, jpg.',
-            'section' => 'banner',
-        )));
-        $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'banner_url', array(
-            'label' => __('Banner Url', 'custom'),
-            'description' => 'Banner Url must be valid.',
-            'section' => 'banner',
-        )));
+
+
         $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'banner_title', array(
             'label' => __('Banner Title', 'custom'),
             'description' => 'Banner Title must be valid.',
@@ -128,6 +126,21 @@ add_action('customize_register', 'newsletter_customize');
         $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'banner_desc', array(
             'label' => __('Banner Description', 'custom'),
             'description' => 'Banner Description must be valid.',
+            'section' => 'banner',
+        )));
+        $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'banner_image', array(
+            'label' => __('Banner Image', 'custom'),
+            'description' => 'Banner image has to be in gif, png, jpg.',
+            'section' => 'banner',
+        )));
+        $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'banner_urlTxt', array(
+            'label' => __('Banner Text Url', 'custom'),
+            'description' => 'Banner Text Url must be valid.',
+            'section' => 'banner',
+        )));
+        $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'banner_url', array(
+            'label' => __('Banner Url', 'custom'),
+            'description' => 'Banner Url must be valid.',
             'section' => 'banner',
         )));
     }
