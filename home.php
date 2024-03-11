@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>"> <!-- mettre ça dans le header et enlever cette ligne-->
+<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>"> <!-- mettre cette ligne dans le header et après enlever cette ligne -->
 <?php 
     include('banner.php');
 ?>
