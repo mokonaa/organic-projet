@@ -60,7 +60,6 @@ function newsletter_customize($wp_customize)
 
 add_action('customize_register', 'newsletter_customize');
 
-?>
 
     //CALLING NAVWALKER
     function register_navwalker() {
@@ -141,3 +140,5 @@ add_action('customize_register', 'newsletter_customize');
 
 
     add_theme_support( 'custom-logo');
+
+?>
