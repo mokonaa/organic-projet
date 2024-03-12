@@ -8,7 +8,7 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@400;500;700&display=swap');
 
 :root {
     /* couleurs */
@@ -34,7 +34,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     --h6-size: 25px;
 
     /* graisseur */
-    --fw-800: 800; /* extra-bold */
     --fw-700: 700; /* bold */
     --fw-500: 500; /* medium */
     --fw-400: 400; /* regular */
@@ -48,11 +47,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 /* À modifier avec les classes ?? à en discuter, il faut ajuster pour que ce système fonctionne bien */
 h1, h2, h3, h4, h5, h6 {
-    /* --_main-color: var(--main-color, --clr-bleu-canard);
-    --_fw-extra-bold: var(--fw-extra-bold, --fw-800); */
+    /* --_main-color: var(--main-color, --clr-bleu-canard); */
 
     color: var(--clr-bleu-canard);
-    font-weight: var(--fw-800);
 } 
 
 p, li {
