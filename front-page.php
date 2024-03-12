@@ -1,5 +1,5 @@
 <?php 
-    include('header.php');
+    get_header();
     include('banner.php');
     include('promotions.php');
     include ('aboutus.php');
@@ -28,4 +28,4 @@
             </div>
     <?php } ?>
 </div>
-<?php //include('footer.php') ?>
+<?php get_footer() ?>
