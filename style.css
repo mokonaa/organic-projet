@@ -124,6 +124,7 @@ blockquote {
 
 .newsletter {
     max-width: 85%;
+    width: 1400px;
     position: relative;
     margin: 0 auto;
     display: flex;
@@ -159,7 +160,7 @@ blockquote {
 .newsletter__form {
     display: flex;
     gap: 1rem;
-    width: 40%;
+    width: 50%;
 }
 
 .newsletter__form input {
