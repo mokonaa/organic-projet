@@ -5,6 +5,7 @@
     }
     add_action( 'wp_enqueue_scripts', 'mytheme_enqueue_styles' );
 
+
 function newsletter_customize($wp_customize)
 {
     $wp_customize->add_section('newsletter', array(
@@ -140,5 +141,6 @@ add_action('customize_register', 'newsletter_customize');
 
 
     add_theme_support( 'custom-logo');
+
 
 ?>
