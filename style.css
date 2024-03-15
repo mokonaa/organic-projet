@@ -9,8 +9,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
 
 :root {
+
     /* couleurs */
     --clr-bleu-canard: #274C5B;
     --clr-vert: #7EB693;
@@ -23,8 +25,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     --clr-noir: #000;
 
     /* fonts */
-    --ff-title: 'Roboto';
-    --ff-body: 'Open Sans';
+    --ff-title: 'Roboto', sans-serif;
+    --ff-body: 'Open Sans', sans-serif;
+    --ff-yelllowtail : 'Yellowtail', sans-serif;
 
     --h1-size: 70px;
     --h2-size: 50px;
@@ -54,7 +57,7 @@ h1, h2, h3, h4, h5, h6 {
 } 
 
 p, li {
-    color: var(--clr-bleu-canard);
+    /*color: var(--clr-bleu-canard);*/
     font-weight: var(--fw-400);
     font-family: var(--ff-body);
 }
@@ -196,9 +199,8 @@ img {
 }
 .banner__description {
     color: var(--clr-vert);
-    font-style: italic;
-    font-weight: bold;
-    font-size:30px;
+    font-family: var(--ff-yelllowtail);
+    font-size:36px;
 }
 .banner__titre {
     font-family: var(--ff-title);
@@ -232,19 +234,30 @@ img {
 }
 .promotion__partieTextes {
     position: absolute;
-    top: 10px;
+    top: 65px;
     left: 50px;
-    width: 350px;
+    width: 300px;
 }
 .promotion__description {
-    color: #274C5B;
-    font-style: italic;
-    font-weight: bold;
+    font-family: var(--ff-yelllowtail);
     font-size:40px;
 }
 .promotion__titre {
     font-family: "Roboto", Arial, sans-serif;
-    color: #274C5B;
     font-weight: bold;
     font-size: 30px;
+}
+.promotion_0 {
+    color: var(--clr-blanc);
+}
+.promotion_0 .promotion__description .promotion__titre{
+    color: var(--clr-blanc);
+}
+
+.promotion_1 .promotion__description{
+    font-family: var(--ff-yelllowtail);
+    color: var(--clr-vert);
+}
+.promotion_1 .promotion__titre{
+    color: var(--clr-bleu-canard);
 }
