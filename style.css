@@ -261,3 +261,66 @@ img {
 .promotion_1 .promotion__titre{
     color: var(--clr-bleu-canard);
 }
+
+
+/*A propos de nous */
+.aboutUs {
+    display: flex;
+    background: var(--clr-blanc-fonce);
+    width: 100%;
+    padding: 30px 0;
+}
+.aboutusPartieGauche {
+    width: 50%;
+}
+.aboutusPartieGauche__img {
+    width: 130%;
+}
+.aboutusPartieDroite__partieTextes {
+    width: 500px;
+}
+.aboutusPartieDroite__partieTextes p {
+    margin: 25px 0;
+}
+.aboutusPartieDroite__titre {
+    font-family: var(--ff-title);
+    font-size: 50px;
+}
+.aboutusPartieDroite__description{
+    font-size:36px;
+    font-family: var(--ff-yelllowtail);
+    color: var(--clr-vert);
+}
+.aboutusPartieDroite__buttonUrl {
+    font-family: var(--ff-title);
+    text-decoration: none;
+    color: var(--clr-blanc) !important;
+    font-weight: bold;
+    font-size: 20px;
+}
+.aboutusPartieDroite__paragraphe, .aboutusPartieDroite__blocsDescription {
+    font-family: var(--ff-title);
+    font-size: 18px;
+    color: var(--clr-gris);
+}
+.aboutusPartieDroite__bloc{
+    display:flex;
+    margin-bottom: 10px;
+}
+
+.aboutusPartieDroite__blocsTitre {
+    font-family: var(--ff-title);
+    font-size: 25px;
+}
+.aboutusPartieDroite__blocimg img{
+    height: fit-content;
+}
+
+.aboutusPartieDroite__blocimg {
+    background-color: var(--clr-blanc);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    margin-right: 16px;
+}

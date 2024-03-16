@@ -268,30 +268,149 @@ add_action('customize_register', 'newsletter_customize');
     add_action('customize_register', 'promotions_customize');
     
 
-    function mytheme_customize_register( $wp_customize ) {
-        //All our sections, settings, and controls will be added here
-        $wp_customize->add_setting( 'header_textcolor' , array(
-            'default'     => "#ffebce",
-            'transport'   => 'refresh',
-        ) );
+    // ABOUT US EDITING
+    function aboutus_customize($wp_customize) {
 
-        $wp_customize->add_setting( 'footer_textcolor' , array(
-            'default'     => "#ffebce",
-            'transport'   => 'refresh',
-        ) );
-    
-        $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'header_textcolor', array(
-            'label'        => __( 'Header Color', 'mytheme' ),
-            'section'    => 'colors',
-        ) ) );
+        $wp_customize->add_section('aboutus', array(
+            'title' => __('À propos de nous', 'custom'),
+            'description' => 'Here you can change promotions options',
+            'priority' => 30,
+            'capability' => 'edit_theme_options'
+        ));
 
-        $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'footer_textcolor', array(
-            'label'        => __( 'Footer Color', 'mytheme' ),
-            'section'    => 'colors',
-        ) ) );
+        $wp_customize->add_setting('aboutus_fondimage', array(
+            'default' => '',
+            'type' => 'theme_mod',
+            'capability' => 'edit_theme_options'
+        ));
+
+        $wp_customize->add_setting('aboutus_description', array(
+            'default' => '',
+            'type' => 'theme_mod',
+            'capability' => 'edit_theme_options'
+        ));
+
+        $wp_customize->add_setting('aboutus_title', array(
+            'default' => '',
+            'type' => 'theme_mod',
+            'capability' => 'edit_theme_options'
+        ));
+
+        $wp_customize->add_setting('aboutus_text', array(
+            'default' => '',
+            'type' => 'theme_mod',
+            'capability' => 'edit_theme_options'
+        ));
+
+        $wp_customize->add_setting('bouton_text', array(
+            'default' => '',
+            'type' => 'theme_mod',
+            'capability' => 'edit_theme_options'
+        ));
+
+        $wp_customize->add_setting('aboutus_bloc1description', array(
+            'default' => '',
+            'type' => 'theme_mod',
+            'capability' => 'edit_theme_options'
+        ));
+
+        $wp_customize->add_setting('aboutus_bloc1title', array(
+            'default' => '',
+            'type' => 'theme_mod',
+            'capability' => 'edit_theme_options'
+        ));
+
+        $wp_customize->add_setting('aboutusbloc1_image', array(
+            'default' => '',
+            'type' => 'theme_mod',
+            'capability' => 'edit_theme_options'
+        ));
+
+
+        $wp_customize->add_setting('aboutus_bloc2description', array(
+            'default' => '',
+            'type' => 'theme_mod',
+            'capability' => 'edit_theme_options'
+        ));
+
+        $wp_customize->add_setting('aboutus_bloc2title', array(
+            'default' => '',
+            'type' => 'theme_mod',
+            'capability' => 'edit_theme_options'
+        ));
+
+        $wp_customize->add_setting('aboutusbloc2_image', array(
+            'default' => '',
+            'type' => 'theme_mod',
+            'capability' => 'edit_theme_options'
+        ));
+
+
+        $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'aboutus_fondimage', array(
+            'label' => __('A propos de nous Fond', 'custom'),
+            'description' => 'Image has to be in gif, png, jpg.',
+            'section' => 'aboutus',
+        )));
+        
+        $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'aboutus_description', array(
+            'label' => __('Description', 'custom'),
+            'description' => 'Promotion Description must be valid.',
+            'section' => 'aboutus',
+        )));
+
+        $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'aboutus_title', array(
+            'label' => __('Titre', 'custom'),
+            'description' => ' must be valid.',
+            'section' => 'aboutus',
+        )));
+
+        $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'aboutus_text', array(
+            'label' => __('Paragraphe', 'custom'),
+            'description' => ' must be valid.',
+            'section' => 'aboutus',
+        )));
+
+        $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'aboutus_bloc1description', array(
+            'label' => __('Bloc 1 Description', 'custom'),
+            'description' => ' must be valid.',
+            'section' => 'aboutus',
+        )));
+
+        $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'aboutus_bloc1title', array(
+            'label' => __('Bloc 1 Titre', 'custom'),
+            'description' => ' must be valid.',
+            'section' => 'aboutus',
+        )));
+
+        $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'aboutusbloc1_image', array(
+            'label' => __('A propos de nous Bloc 1 Image', 'custom'),
+            'description' => 'Image has to be in gif, png, jpg.',
+            'section' => 'aboutus',
+        )));
+
+        $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'aboutus_bloc2description', array(
+            'label' => __('Bloc 2 Description', 'custom'),
+            'description' => ' must be valid.',
+            'section' => 'aboutus',
+        )));
+
+        $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'aboutus_bloc2title', array(
+            'label' => __('Bloc 2 Titre', 'custom'),
+            'description' => ' must be valid.',
+            'section' => 'aboutus',
+        )));
+
+        $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'aboutusbloc2_image', array(
+            'label' => __('A propos de nous Bloc 2 Image', 'custom'),
+            'description' => 'Image has to be in gif, png, jpg.',
+            'section' => 'aboutus',
+        )));
+
+
+
     }
-    add_action( 'customize_register', 'mytheme_customize_register' );
-
+    add_action('customize_register', 'aboutus_customize');
+  
 
     add_theme_support( 'custom-logo');
 
