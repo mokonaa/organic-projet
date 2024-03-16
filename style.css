@@ -188,6 +188,11 @@ img {
 .banner {
     position: relative;
 }
+.banner h1 {
+    color: var(--clr-bleu-canard);
+    font-weight: bold;
+}
+
 .banner__img {
     max-width: 100%;
 }
@@ -228,6 +233,7 @@ img {
     width: 600px;
     padding: 0 10px;
 }
+
 .promotion__img {
     border-radius: 20px;
     max-width: 100%;
@@ -270,6 +276,11 @@ img {
     width: 100%;
     padding: 30px 0;
 }
+.aboutUs h1 {
+    color: var(--clr-bleu-canard);
+    font-weight: bold;
+}
+
 .aboutusPartieGauche {
     width: 50%;
 }
