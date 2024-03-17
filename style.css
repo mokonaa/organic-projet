@@ -53,7 +53,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 /* À modifier avec les classes ?? à en discuter, il faut ajuster pour que ce système fonctionne bien */
 h1, h2, h3, h4, h5, h6 {
     /* --_main-color: var(--main-color, --clr-bleu-canard); */
-    font-weight: var(--fw-800);
+    font-weight: var(--fw-700);
     font-family: var(--ff-title);
     color: var(--clr-bleu-canard);
 }
@@ -156,8 +156,8 @@ blockquote {
 
 .newsletter__title {
     width: 400px;
-    font-size: 50px;
-    font-weight: var(--fw-800);
+    font-size: var(--h2-size);
+    font-weight: var(--fw-700);
 }
 
 .newsletter__form {
@@ -262,7 +262,7 @@ img {
 .promotion__titre {
     font-family: "Roboto", Arial, sans-serif;
     font-weight: bold;
-    font-size: 30px;
+    font-size: var(--h5-size);
 }
 
 .promotion_0 {
@@ -291,9 +291,9 @@ img {
     padding: 90px 0;
 }
 
-.aboutUs h1 {
+.aboutusPartieDroite__titre {
     color: var(--clr-bleu-canard);
-    font-weight: bold;
+    font-weight: var(--fw-700);
 }
 
 .aboutusPartieGauche {
@@ -318,7 +318,7 @@ img {
 
 .aboutusPartieDroite__titre {
     font-family: var(--ff-title);
-    font-size: 50px;
+    font-size: var(--h2-size);
 }
 
 .aboutusPartieDroite__description {
@@ -352,7 +352,7 @@ img {
 
 .aboutusPartieDroite__blocsTitre {
     font-family: var(--ff-title);
-    font-size: 25px;
+    font-size: var(--h6-size);
 }
 
 .aboutusPartieDroite__blocimg img {
