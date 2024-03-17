@@ -9,8 +9,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
 
 :root {
+
     /* couleurs */
     --clr-bleu-canard: #274C5B;
     --clr-vert: #7EB693;
@@ -23,8 +25,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     --clr-noir: #000;
 
     /* fonts */
-    --ff-title: 'Roboto';
-    --ff-body: 'Open Sans';
+    --ff-title: 'Roboto', sans-serif;
+    --ff-body: 'Open Sans', sans-serif;
+    --ff-yelllowtail : 'Yellowtail', sans-serif;
 
     --h1-size: 70px;
     --h2-size: 50px;
@@ -54,7 +57,7 @@ h1, h2, h3, h4, h5, h6 {
 } 
 
 p, li {
-    color: var(--clr-bleu-canard);
+    /*color: var(--clr-bleu-canard);*/
     font-weight: var(--fw-400);
     font-family: var(--ff-body);
 }
@@ -174,7 +177,6 @@ blockquote {
 }
 
 
-
 img {
     width: 100%;
     height: 100%;
@@ -185,6 +187,11 @@ img {
 .banner {
     position: relative;
 }
+.banner h1 {
+    color: var(--clr-bleu-canard);
+    font-weight: bold;
+}
+
 .banner__img {
     max-width: 100%;
 }
@@ -192,13 +199,12 @@ img {
     position: absolute;
     top: 100px;
     left: 100px;
-    width: 400px;
+    width: 540px;
 }
 .banner__description {
     color: var(--clr-vert);
-    font-style: italic;
-    font-weight: bold;
-    font-size:30px;
+    font-family: var(--ff-yelllowtail);
+    font-size:36px;
 }
 .banner__titre {
     font-family: var(--ff-title);
@@ -211,4 +217,126 @@ img {
     color: var(--clr-bleu-canard);
     font-weight: bold;
     font-size: 20px;
+}
+
+
+/*Promotions*/
+.promotionsList {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 100px 0;
+}
+.promotion {
+    position: relative;
+    width: 600px;
+    padding: 0 10px;
+}
+
+.promotion__img {
+    border-radius: 20px;
+    max-width: 100%;
+}
+.promotion__partieTextes {
+    position: absolute;
+    top: 65px;
+    left: 50px;
+    width: 195px;
+}
+.promotion__description {
+    font-family: var(--ff-yelllowtail);
+    font-size:36px;
+}
+.promotion__titre {
+    font-family: "Roboto", Arial, sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+}
+.promotion_0 {
+    color: var(--clr-blanc);
+}
+.promotion_0 .promotion__description .promotion__titre{
+    color: var(--clr-blanc);
+}
+
+.promotion_1 .promotion__description{
+    font-family: var(--ff-yelllowtail);
+    color: var(--clr-vert);
+}
+.promotion_1 .promotion__titre{
+    color: var(--clr-bleu-canard);
+}
+
+
+/*A propos de nous */
+.aboutUs {
+    display: flex;
+    background: var(--clr-blanc-fonce);
+    width: 100%;
+    padding: 90px 0;
+}
+.aboutUs h1 {
+    color: var(--clr-bleu-canard);
+    font-weight: bold;
+}
+
+.aboutusPartieGauche {
+    width: 50%;
+}
+.aboutusPartieGauche__img {
+    width: 130%;
+}
+.aboutusPartieDroite__partieTextes {
+    width: 570px;
+}
+.aboutusPartieDroite__partieTextes > p {
+    margin: 25px 0;
+}
+.aboutusPartieDroite__bloc h1 {
+    margin-bottom: 15px;
+}
+.aboutusPartieDroite__titre {
+    font-family: var(--ff-title);
+    font-size: 50px;
+}
+.aboutusPartieDroite__description{
+    font-size:36px;
+    font-family: var(--ff-yelllowtail);
+    color: var(--clr-vert);
+}
+.aboutusPartieDroite__button {
+    margin-top: 30px;
+}
+.aboutusPartieDroite__buttonUrl {
+    font-family: var(--ff-title);
+    text-decoration: none;
+    color: var(--clr-blanc) !important;
+    font-weight: bold;
+    font-size: 20px;
+}
+.aboutusPartieDroite__paragraphe, .aboutusPartieDroite__blocsDescription {
+    font-family: var(--ff-body);
+    font-size: 18px;
+    color: var(--clr-gris);
+}
+.aboutusPartieDroite__bloc{
+    display:flex;
+    margin-bottom: 10px;
+}
+
+.aboutusPartieDroite__blocsTitre {
+    font-family: var(--ff-title);
+    font-size: 25px;
+}
+.aboutusPartieDroite__blocimg img{
+    height: fit-content;
+}
+
+.aboutusPartieDroite__blocimg {
+    background-color: var(--clr-blanc);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    margin-right: 16px;
 }

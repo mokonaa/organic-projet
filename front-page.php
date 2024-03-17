@@ -1,4 +1,9 @@
-<?php include('header.php') ?>
+<?php 
+    include('header.php');
+    include('banner.php');
+    include('promotions.php');
+    include ('aboutus.php');
+?>
 <div class="newsletter">
     <?php 
         $newsletter_image = get_theme_mod('newsletter_image', '');
@@ -23,4 +28,4 @@
             </div>
     <?php } ?>
 </div>
-<?php include('footer.php') ?>
+<?php //include('footer.php') ?>
