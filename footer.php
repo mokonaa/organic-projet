@@ -24,7 +24,7 @@
                 <?php } ?>
             </div>
             <?php if (get_theme_mod("footer_description")) { ?>
-                <p class="footer-socials__text">Simply dummy text of the printing and typesetting industry. </br> Lorem Ipsum simply dummy text of the printing</p>
+                <p class="footer-socials__text"><?php echo get_theme_mod("footer_description"); ?></p>
             <?php } ?>
             <div class="socials">
                 <?php if(get_theme_mod("social-instagram")) { ?>
