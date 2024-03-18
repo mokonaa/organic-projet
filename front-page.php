@@ -28,4 +28,5 @@
             </div>
     <?php } ?>
 </div>
+<?php include ('eco-friendly.php'); ?>
 <?php get_footer() ?>

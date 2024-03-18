@@ -432,3 +432,117 @@ function register_useful_links(){
     register_nav_menu( 'footer', 'Liens utiles' );
   }
 add_action( 'after_setup_theme', 'register_useful_links' );
+
+
+// Personnalisation du bloc réassurance eco-friendly
+function eco_friendly_customize($wp_customize) {
+    $wp_customize->add_section('Eco-friendly', array(
+        'title' => __('Réassurance eco-friendly', 'custom'),
+        'description' => 'Vous pouvez modifier ici les informations concernant la réassurance eco-friendly',
+        'priority' => 30,
+        'capability' => 'edit_theme_options'
+    ));
+    
+    $wp_customize->add_setting('eco_friendly_img', array(
+        'default' => '',
+        'type' => 'theme_mod',
+        'capability' => 'edit_theme_options'
+    ));
+
+    $wp_customize->add_setting('eco_friendly_desc', array(
+        'default' => '',
+        'type' => 'theme_mod',
+        'capability' => 'edit_theme_options'
+    ));
+
+    $wp_customize->add_setting('eco_friendly_title', array(
+        'default' => '',
+        'type' => 'theme_mod',
+        'capability' => 'edit_theme_options'
+    ));
+
+    $wp_customize->add_setting('eco_friendly_subtitle_1', array(
+        'default' => '',
+        'type' => 'theme_mod',
+        'capability' => 'edit_theme_options'
+    ));
+
+    $wp_customize->add_setting('eco_friendly_text_1', array(
+        'default' => '',
+        'type' => 'theme_mod',
+        'capability' => 'edit_theme_options'
+    ));
+
+    $wp_customize->add_setting('eco_friendly_subtitle_2', array(
+        'default' => '',
+        'type' => 'theme_mod',
+        'capability' => 'edit_theme_options'
+    ));
+
+    $wp_customize->add_setting('eco_friendly_text_2', array(
+        'default' => '',
+        'type' => 'theme_mod',
+        'capability' => 'edit_theme_options'
+    ));
+
+    $wp_customize->add_setting('eco_friendly_subtitle_3', array(
+        'default' => '',
+        'type' => 'theme_mod',
+        'capability' => 'edit_theme_options'
+    ));
+
+    $wp_customize->add_setting('eco_friendly_text_3', array(
+        'default' => '',
+        'type' => 'theme_mod',
+        'capability' => 'edit_theme_options'
+    ));
+    
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'eco_friendly_img', array(
+        'label' => __('Image', 'custom'),
+        'description' => 'Le champ est requis',
+        'section' => 'Eco-friendly',
+    )));
+
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'eco_friendly_desc', array(
+        'label' => __('Description', 'custom'),
+        'description' => 'Le champ est requis',
+        'section' => 'Eco-friendly',
+    )));
+
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'eco_friendly_title', array(
+        'label' => __('Titre', 'custom'),
+        'description' => 'Le champ est requis',
+        'section' => 'Eco-friendly',
+    )));
+
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'eco_friendly_subtitle_1', array(
+        'label' => __('Premier sous-titre', 'custom'),
+        'section' => 'Eco-friendly',
+    )));
+
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'eco_friendly_text_1', array(
+        'label' => __('Première paragraphe', 'custom'),
+        'section' => 'Eco-friendly',
+    )));
+
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'eco_friendly_subtitle_2', array(
+        'label' => __('Deuxième sous-titre', 'custom'),
+        'section' => 'Eco-friendly',
+    )));
+
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'eco_friendly_text_2', array(
+        'label' => __('Deuxième paragraphe', 'custom'),
+        'section' => 'Eco-friendly',
+    )));
+
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'eco_friendly_subtitle_3', array(
+        'label' => __('Troisième sous-titre', 'custom'),
+        'section' => 'Eco-friendly',
+    )));
+
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'eco_friendly_text_3', array(
+        'label' => __('Troisième paragraphe', 'custom'),
+        'section' => 'Eco-friendly',
+    )));
+}
+add_action('customize_register', 'eco_friendly_customize');

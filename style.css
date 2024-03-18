@@ -8,7 +8,7 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500,700&family=Roboto:wght@400;500;700&family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&family=Roboto:wght@400;500;700&family=Yellowtail&display=swap');
 
 :root {
 
@@ -190,9 +190,9 @@ img {
     position: relative;
 }
 
-.banner h1 {
+.banner__titre {
     color: var(--clr-bleu-canard);
-    font-weight: bold;
+    font-weight: var(--fw-700);
 }
 
 .banner__img {
@@ -211,7 +211,6 @@ img {
     font-family: var(--ff-yelllowtail);
     font-size: 36px;
     font-style: italic;
-    font-weight: bold;
 }
 
 .banner__titre {
@@ -223,7 +222,7 @@ img {
 .banner__buttonUrl {
     text-decoration: none;
     color: var(--clr-bleu-canard);
-    font-weight: bold;
+    font-weight: var(--fw-700);
     font-size: 20px;
 }
 
@@ -260,8 +259,8 @@ img {
 }
 
 .promotion__titre {
-    font-family: "Roboto", Arial, sans-serif;
-    font-weight: bold;
+    font-family: var(--ff-title);
+    font-weight: var(--fw-700);
     font-size: var(--h5-size);
 }
 
@@ -335,7 +334,7 @@ img {
     font-family: var(--ff-title);
     text-decoration: none;
     color: var(--clr-blanc) !important;
-    font-weight: bold;
+    font-weight: var(--fw-700);
     font-size: 20px;
 }
 
@@ -375,7 +374,7 @@ img {
     align-items: center;
     height: 204px;
     padding: 0 162px;
-    background-color: var(--clr-blanc);
+    background-color: #fff;
     font-family: var(--ff-title);
     font-size: 20px;
 }
@@ -493,7 +492,7 @@ img {
     justify-content: center;
     min-height: 336px;
     column-gap: 51px;
-    background-color: var(--clr-blanc);
+    background-color: #fff;
     font-size: 18px;
     padding-bottom: 102px;
     border-bottom: 1px solid var(--clr-gris-clair);
@@ -585,4 +584,65 @@ img {
 #footer-links a {
     color: var(--clr-gris);
     font-family: var(--ff-body);
+}
+
+/* Section eco-friendly */
+.eco-friendly-section {
+    display: flex;
+    min-height: 931px;
+}
+
+.eco-friendly-image {
+    width: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.eco-friendly-container {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+}
+
+.eco-friendly {
+    position: relative;
+    width: 789px;
+    left: -100px;
+    padding: 78px 89px;
+    background-color: #fff;
+    border-radius: 30px;
+}
+
+.eco-friendly__description {
+    color: var(--clr-vert);
+    font-family: var(--ff-yelllowtail);
+    font-size: 36px;
+    font-style: italic;
+    margin-bottom: 8px;
+}
+
+.eco-friendly__title {
+    color: var(--clr-bleu-canard);
+    font-weight: var(--fw-700);
+    font-size: var(--h2-size);
+    margin-bottom: 35px;
+}
+
+.eco-friendly__subtitle {
+    color: var(--clr-bleu-canard);
+    font-weight: var(--fw-500);
+    font-size: var(--h6-size);
+    margin-bottom: 10px;
+}
+
+.eco-friendly__text {
+    font-family: var(--ff-body);
+    font-size: 18px;
+    color: var(--clr-gris);
+}
+
+.eco-friendly__text:not(:last-child) {
+    margin-bottom: 38px;
 }
