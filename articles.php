@@ -16,10 +16,10 @@
     <?php } ?>
     <div class="blog__cards">
         <?php
-        $post_count = 0; // Initialize counter variable
+        $post_count = 0;
 
         if (have_posts()) : while (have_posts() && $post_count < 2) : the_post(); // Loop until 2 posts are displayed
-                $post_count++; // Increment the counter after displaying each post
+                $post_count++; 
         ?>
                 <div class="blog__card">
                     <div class="blog__image">
