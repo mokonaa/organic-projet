@@ -33,17 +33,17 @@
         $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'newsletter_image', array(
             'label' => __('Image', 'custom'),
             'description' => 'L\'image doit être en gif, png, jpg',
-            'section' => 'newsletter', // Corrected section slug
+            'section' => 'newsletter',
         )));
         $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'newsletter_url', array(
             'label' => __('Lien', 'custom'),
             'description' => 'La redirection doit être valide',
-            'section' => 'newsletter', // Corrected section slug
+            'section' => 'newsletter',
         )));
         $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'newsletter_title', array(
             'label' => __('Titre', 'custom'),
             'description' => 'Le titre doit être valide',
-            'section' => 'newsletter', // Corrected section slug
+            'section' => 'newsletter',
         )));
 
         // Ajouter un paramètre de personnalisation pour la couleur du texte
@@ -58,6 +58,56 @@
         )));
     }
     add_action('customize_register', 'newsletter_customize');
+    function blog_customize($wp_customize)
+    {
+        $wp_customize->add_section('blog', array(
+            'title' => __('Blog', 'custom'),
+            'description' => 'Vous pouvez changer ici les informations de ce bloc',
+            'priority' => 30,
+            'capability' => 'edit_theme_options'
+        ));
+        $wp_customize->add_setting('blog_url', array(
+            'default' => '',
+            'type' => 'theme_mod',
+            'capability' => 'edit_theme_options'
+        ));
+        $wp_customize->add_setting('blog_title', array(
+            'default' => '',
+            'type' => 'theme_mod',
+            'capability' => 'edit_theme_options'
+        ));
+        $wp_customize->add_setting('blog_subtitle', array(
+            'default' => '',
+            'type' => 'theme_mod',
+            'capability' => 'edit_theme_options'
+        ));
+        $wp_customize->add_setting('blog_text_cta', array(
+            'default' => '',
+            'type' => 'theme_mod',
+            'capability' => 'edit_theme_options'
+        ));
+        $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'blog_url', array(
+            'label' => __('Lien', 'custom'),
+            'description' => 'La redirection doit être valide',
+            'section' => 'blog',
+        )));
+        $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'blog_title', array(
+            'label' => __('Titre', 'custom'),
+            'description' => 'Le titre doit être valide',
+            'section' => 'blog',
+        )));
+        $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'blog_subtitle', array(
+            'label' => __('Sous-titre', 'custom'),
+            'description' => 'Le sous-titre doit être valide',
+            'section' => 'blog',
+        )));
+        $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'blog_text_cta', array(
+            'label' => __('Texte du bouton', 'custom'),
+            'description' => 'Le texte du bouton doit être valide',
+            'section' => 'blog',
+        )));
+    }
+    add_action('customize_register', 'blog_customize');
 
 
     //CALLING NAVWALKER

@@ -81,9 +81,7 @@ blockquote {
     /* --_background-color: var(--background-color, --clr-bleu-canard);
     --_color: var(--color, --clr-blanc);
     --_border-color: var(--border-color, var(--clr-bleu-canard)); */
-    margin: auto;
     width: auto;
-    margin: auto;
     font-family: var(--ff-title);
     padding: 28px 39px;
     border-radius: 1rem;
@@ -645,4 +643,106 @@ img {
 
 .eco-friendly__text:not(:last-child) {
     margin-bottom: 38px;
+}
+
+/* Blog */
+
+.blog {
+    max-width: 85%;
+    width: 1400px;
+    margin: 0 auto;
+}
+
+.blog__title-content {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 48px;
+}
+.content__title {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.blog__title {
+    font-family: var(--ff-title);
+    font-size: 50px;
+}
+.blog__subtitle {
+    color: var(--clr-vert);
+    font-family: var(--ff-yelllowtail);
+}
+.blog__button {
+    align-self: flex-end;
+}
+
+.blog__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.blog__card {
+    position: relative;
+    width: 49%;
+    padding-bottom: 100px;
+}
+.card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card__content{
+    height: 324px;
+    bottom: 15%;
+    left: 50%;
+    transform: translate(-50%, 15%);
+    background-color: var(--clr-blanc);
+    padding: 2rem 3rem;
+    border-radius: 2rem;
+    position: absolute;
+    box-shadow: 0 20px 35px #00000020;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 80%;
+}
+.card__title {
+    margin-bottom: 1rem;
+}
+.card__button {
+    margin-top: 1rem;
+}
+.card__author-text {
+    text-transform: capitalize;
+    font-family: var(--ff-body);
+    font-size: 18px;
+}
+.card__author {
+    display: flex;
+    gap: .5rem;
+    color: var(--clr-bleu-canard);
+    margin-bottom: 1rem;
+}
+
+.card__date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--clr-bleu-canard);
+    background-color: var(--clr-blanc);
+    font-weight: var(--fw-700);
+    font-size: 1rem;
+    text-align: center;
+    word-break:keep-all;
+    text-transform: capitalize;
+    width: 75px;
+    height: 75px;
+    padding: 2rem;
+    border-radius: 100px;
+    position: absolute;
+    top: 3%;
+    left: 3%;
 }
