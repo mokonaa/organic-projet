@@ -44,6 +44,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     /* regular */
 }
 
+body {
+    overflow-x: hidden; /* to remove */
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -121,6 +125,9 @@ blockquote {
     background: none;
 }
 
+
+/* Newsletter */
+
 .newsletter {
     max-width: 85%;
     width: 1400px;
@@ -177,31 +184,34 @@ blockquote {
 }
 
 
-img {
+.newsletter__picture img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-/*Banner*/
+
+/* Banner */
+
 .banner {
     position: relative;
-}
-
-.banner__titre {
-    color: var(--clr-bleu-canard);
-    font-weight: var(--fw-700);
+    padding: 265px 0 330px 260px;
+    min-height: 898px;
 }
 
 .banner__img {
-    max-width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
 }
 
 .banner__partieTextes {
-    position: absolute;
-    top: 100px;
-    left: 100px;
-    width: 540px;
+    width: 530px;
 }
 
 .banner__description {
@@ -209,12 +219,15 @@ img {
     font-family: var(--ff-yelllowtail);
     font-size: 36px;
     font-style: italic;
+    margin-bottom: 10px;
 }
 
 .banner__titre {
     font-family: var(--ff-title);
     font-size: var(--h1-size);
-    margin: 25px 0;
+    color: var(--clr-bleu-canard);
+    font-weight: var(--fw-700);
+    margin-bottom: 23px;
 }
 
 .banner__buttonUrl {
@@ -225,48 +238,54 @@ img {
 }
 
 
-/*Promotions*/
+/* Promotions */
+
 .promotionsList {
     display: flex;
-    align-items: center;
     justify-content: center;
-    margin: 100px 0;
+    column-gap: 36px;
+    height: 367px;
+    margin-top: 154px;
 }
 
 .promotion {
     position: relative;
-    width: 600px;
-    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    padding: 0 54.88px;
+    width: 682.24px;
+    border-radius: 20px;
+    overflow: hidden;
 }
 
 .promotion__img {
-    border-radius: 20px;
-    max-width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
 }
 
 .promotion__partieTextes {
-    position: absolute;
-    top: 65px;
-    left: 50px;
-    width: 195px;
+    width: 277.63px;
 }
 
 .promotion__description {
     font-family: var(--ff-yelllowtail);
     font-size: 36px;
+    margin-bottom: 5px;
 }
 
 .promotion__titre {
     font-family: var(--ff-title);
     font-weight: var(--fw-700);
-    font-size: var(--h5-size);
+    font-size: var(--h3-size);
 }
 
 .promotion_0 {
-    color: var(--clr-blanc);
-}
-
-.promotion_0 .promotion__description .promotion__titre {
     color: var(--clr-blanc);
 }
 
@@ -280,52 +299,44 @@ img {
 }
 
 
-/*A propos de nous */
+/* A propos de nous */
+
 .aboutUs {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 40px;
     background: var(--clr-blanc-fonce);
-    width: 100%;
-    padding: 90px 0;
+    min-height: 1067px;
+    padding: 186px 0 199px;
+    margin-top: 190px;
 }
 
-.aboutusPartieDroite__titre {
-    color: var(--clr-bleu-canard);
-    font-weight: var(--fw-700);
-}
-
-.aboutusPartieGauche {
-    width: 50%;
+.aboutusPartieDroite, .aboutusPartieGauche {
+    width: 702px;
 }
 
 .aboutusPartieGauche__img {
-    width: 130%;
-}
-
-.aboutusPartieDroite__partieTextes {
-    width: 570px;
-}
-
-.aboutusPartieDroite__partieTextes>p {
-    margin: 25px 0;
-}
-
-.aboutusPartieDroite__bloc h1 {
-    margin-bottom: 15px;
-}
-
-.aboutusPartieDroite__titre {
-    font-family: var(--ff-title);
-    font-size: var(--h2-size);
+    width: 100%;
 }
 
 .aboutusPartieDroite__description {
     font-size: 36px;
     font-family: var(--ff-yelllowtail);
     color: var(--clr-vert);
+    margin-bottom: 8px;
+}
+
+.aboutusPartieDroite__titre {
+    color: var(--clr-bleu-canard);
+    font-weight: var(--fw-700);
+    font-family: var(--ff-title);
+    font-size: var(--h2-size);
+    margin-bottom: 14px;
 }
 
 .aboutusPartieDroite__button {
-    margin-top: 30px;
+    margin-top: 46px;
 }
 
 .aboutusPartieDroite__buttonUrl {
@@ -336,6 +347,10 @@ img {
     font-size: 20px;
 }
 
+.aboutusPartieDroite__paragraphe {
+    margin-bottom: 46px;
+}
+
 .aboutusPartieDroite__paragraphe, .aboutusPartieDroite__blocsDescription {
     font-family: var(--ff-body);
     font-size: 18px;
@@ -344,28 +359,38 @@ img {
 
 .aboutusPartieDroite__bloc {
     display: flex;
-    margin-bottom: 10px;
+    column-gap: 19px;
+    width: 564px;
+}
+
+.aboutusPartieDroite__bloc:not(:last-child) {
+    margin-bottom: 32.5px;
 }
 
 .aboutusPartieDroite__blocsTitre {
     font-family: var(--ff-title);
     font-size: var(--h6-size);
-}
-
-.aboutusPartieDroite__blocimg img {
-    height: fit-content;
+    margin-bottom: 7px;
 }
 
 .aboutusPartieDroite__blocimg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 101px;
+    height: 101px;
     background-color: var(--clr-blanc);
     border-radius: 10px;
-    display: flex;
-    align-items: center;
-    padding: 16px;
     margin-right: 16px;
 }
 
+.aboutusPartieDroite__blocimg img {
+    width: 53px;
+}
+
+
 /* Menu de navigation */
+
 .nav-menu-container {
     display: flex;
     justify-content: center;
@@ -485,6 +510,7 @@ img {
 }
 
 /* Footer */
+
 .footer {
     display: flex;
     justify-content: center;
@@ -585,6 +611,7 @@ img {
 }
 
 /* Section eco-friendly */
+
 .eco-friendly-section {
     display: flex;
     min-height: 931px;
@@ -660,6 +687,7 @@ img {
     justify-content: space-between;
     margin-bottom: 48px;
 }
+
 .content__title {
     display: flex;
     flex-direction: column;
@@ -670,10 +698,12 @@ img {
     font-family: var(--ff-title);
     font-size: 50px;
 }
+
 .products__subtitle, .blog__subtitle {
     color: var(--clr-vert);
     font-family: var(--ff-yelllowtail);
 }
+
 .blog__button {
     align-self: flex-end;
 }
@@ -684,17 +714,14 @@ img {
     justify-content: space-between;
     gap: 1rem;
 }
+
 .blog__card {
     position: relative;
     width: 49%;
     padding-bottom: 100px;
 }
-.card__image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.card__content{
+
+.card__content {
     height: 324px;
     bottom: 15%;
     left: 50%;
@@ -710,17 +737,21 @@ img {
     justify-content: space-between;
     width: 80%;
 }
+
 .card__title {
     margin-bottom: 1rem;
 }
+
 .card__button {
     margin-top: 1rem;
 }
+
 .card__author-text {
     text-transform: capitalize;
     font-family: var(--ff-body);
     font-size: 18px;
 }
+
 .card__author {
     display: flex;
     gap: .5rem;
@@ -737,7 +768,7 @@ img {
     font-weight: var(--fw-700);
     font-size: 1rem;
     text-align: center;
-    word-break:keep-all;
+    word-break: keep-all;
     text-transform: capitalize;
     width: 75px;
     height: 75px;
@@ -754,6 +785,7 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 80px;
 }
 
 .products__title, .products__subtitle {
@@ -767,7 +799,8 @@ img {
     flex-wrap: wrap;
     gap: 1.5rem;
 
-} 
+}
+
 .product__card {
     padding: 1rem;
     position: relative;
@@ -775,7 +808,7 @@ img {
     width: 22%;
     text-decoration: none;
     border-radius: 1rem;
-} 
+}
 
 .product__content {
     padding-inline: 1rem;
@@ -791,6 +824,7 @@ img {
     width: 100%;
     border-bottom: 1px solid #DEDDDD;
 }
+
 .product__price {
     margin-block: .5rem;
 }
