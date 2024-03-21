@@ -136,6 +136,7 @@ blockquote {
     display: flex;
     height: 323px;
     border-radius: 30px;
+    margin-top: 185px;
 }
 
 .newsletter__text {
@@ -673,6 +674,10 @@ blockquote {
 }
 
 /* Blog */
+
+.blog {
+    margin-top: 134px;
+}
 
 .blog, .products {
     padding-block: 2.5rem;
