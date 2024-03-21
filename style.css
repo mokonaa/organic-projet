@@ -419,7 +419,7 @@ blockquote {
     margin-right: 130px;
 }
 
-#primary-menu {
+#primary-menu ul {
     display: flex;
     column-gap: 50px;
     list-style: none;
