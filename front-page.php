@@ -6,7 +6,6 @@
     include ('products.php');
     include ('articles.php');
     include ('newsletter.php');
+    include ('eco-friendly.php');
+    get_footer();
 ?>
-
-<?php include ('eco-friendly.php'); ?>
-<?php get_footer() ?>
