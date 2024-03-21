@@ -18,12 +18,12 @@
         <?php
         $post_count = 0;
 
-        if (have_posts()) : while (have_posts() && $post_count < 2) : the_post(); // Loop until 2 posts are displayed
+        if (have_posts()) : while (have_posts() && $post_count < 2) : the_post();
                 $post_count++; 
         ?>
                 <div class="blog__card">
-                    <div class="blog__image">
-                        <?php the_post_thumbnail('post-thumbnail', ['class' => 'blog__image', 'title' => 'Feature image']) ?>
+                    <div class="card__image">
+                        <?php the_post_thumbnail('post-thumbnail') ?>
                     </div>
                     <p class="card__date"><?php echo get_the_date('j F'); ?></p>
                     <div class="card__content">
