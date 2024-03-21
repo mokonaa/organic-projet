@@ -598,7 +598,7 @@ blockquote {
     background-color: var(--clr-vert-clair);
 }
 
-#footer-links {
+#footer-links ul {
     display: flex;
     flex-direction: column;
     row-gap: 24px;
