@@ -725,7 +725,7 @@ blockquote {
     width: 100%;
     height: 524px;
 }
-.card__image img {
+.card__image img, .product__image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
