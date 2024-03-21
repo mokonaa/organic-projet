@@ -1,7 +1,7 @@
 <?php 
 if (get_theme_mod('banner_image') && get_theme_mod('banner_title') && get_theme_mod('banner_desc')){ ?>
     <div class="banner">
-        <img class="banner__img" src="<?php echo get_theme_mod('banner_image') ?>" />
+        <img loading="lazy" class="banner__img" data-src="<?php echo get_theme_mod('banner_image') ?>" />
         <div class="banner__partieTextes">
             <p class="banner__description"><?php echo get_theme_mod('banner_desc') ?></p>
             <h1 class="banner__titre">

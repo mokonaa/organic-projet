@@ -58,6 +58,57 @@
         )));
     }
     add_action('customize_register', 'newsletter_customize');
+    function products_customize($wp_customize)
+    {
+        $wp_customize->add_section('products', array(
+            'title' => __('Produits', 'custom'),
+            'description' => 'Vous pouvez changer ici les informations de ce bloc',
+            'priority' => 30,
+            'capability' => 'edit_theme_options'
+        ));
+
+        $wp_customize->add_setting('products_subtitle', array(
+            'default' => '',
+            'type' => 'theme_mod',
+            'capability' => 'edit_theme_options'
+        ));
+        $wp_customize->add_setting('products_url', array(
+            'default' => '',
+            'type' => 'theme_mod',
+            'capability' => 'edit_theme_options'
+        ));
+        $wp_customize->add_setting('products_text_cta', array(
+            'default' => '',
+            'type' => 'theme_mod',
+            'capability' => 'edit_theme_options'
+        ));
+        $wp_customize->add_setting('products_title', array(
+            'default' => '',
+            'type' => 'theme_mod',
+            'capability' => 'edit_theme_options'
+        ));
+        $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'products_url', array(
+            'label' => __('Lien', 'custom'),
+            'description' => 'La redirection doit être valide',
+            'section' => 'products',
+        )));
+        $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'products_title', array(
+            'label' => __('Titre', 'custom'),
+            'description' => 'Le titre doit être valide',
+            'section' => 'products',
+        )));
+        $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'products_subtitle', array(
+            'label' => __('Titre', 'custom'),
+            'description' => 'Le sous-titre doit être valide',
+            'section' => 'products',
+        )));
+        $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'products_text_cta', array(
+            'label' => __('Titre', 'custom'),
+            'description' => 'Le texte doit être valide',
+            'section' => 'products',
+        )));
+    }
+    add_action('customize_register', 'products_customize');
     function blog_customize($wp_customize)
     {
         $wp_customize->add_section('blog', array(
