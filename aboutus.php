@@ -2,7 +2,7 @@
 if (get_theme_mod('aboutus_title') && get_theme_mod('aboutus_description') && get_theme_mod('aboutus_text')){ ?>
    <div class="aboutUs">
     <div class="aboutusPartieGauche">
-        <img loading="lazy" class="aboutusPartieGauche__img" data-src="<?php echo get_theme_mod('aboutus_fondimage') ?>" />
+        <img loading="lazy" class="aboutusPartieGauche__img" src="<?php echo get_theme_mod('aboutus_fondimage') ?>" />
     </div>
     <div class="aboutusPartieDroite">
             <p class="aboutusPartieDroite__description"><?php echo get_theme_mod('aboutus_description') ?></p>

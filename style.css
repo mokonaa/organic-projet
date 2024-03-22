@@ -164,6 +164,7 @@ blockquote {
     width: 400px;
     font-size: var(--h2-size);
     font-weight: var(--fw-700);
+    color: var(--clr-blanc)
 }
 
 .newsletter__form {
@@ -411,7 +412,7 @@ blockquote {
     margin-right: 130px;
 }
 
-#primary-menu {
+#primary-menu, #primary-menu ul {
     display: flex;
     column-gap: 50px;
     list-style: none;
@@ -590,7 +591,7 @@ blockquote {
     background-color: var(--clr-vert-clair);
 }
 
-#footer-links ul {
+#footer-links, #footer-links ul {
     display: flex;
     flex-direction: column;
     row-gap: 24px;
