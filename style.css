@@ -420,7 +420,7 @@ blockquote {
     margin-right: 130px;
 }
 
-#primary-menu ul {
+#primary-menu {
     display: flex;
     column-gap: 50px;
     list-style: none;
