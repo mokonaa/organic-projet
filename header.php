@@ -1,9 +1,9 @@
 <?php
-$header_content = get_transient('my_theme_header_content');
+//$header_content = get_transient('my_theme_header_content');
 
-if (false === $header_content) {
-    ob_start();
-    ?>
+// if (false === $header_content) {
+//     ob_start();
+//     ?>
         <!DOCTYPE html>
         <html lang="fr">
 
@@ -50,9 +50,9 @@ if (false === $header_content) {
             </div>
         </div>
     <?php
-    $header_content = ob_get_clean();
-    set_transient('my_theme_header_content', $header_content, 24 * HOUR_IN_SECONDS); // Stockage du contenu en transient pour 24 heures
-}
+//     $header_content = ob_get_clean();
+//     set_transient('my_theme_header_content', $header_content, 24 * HOUR_IN_SECONDS); // Stockage du contenu en transient pour 24 heures
+// }
 
-echo $header_content;
+// echo $header_content;
 ?>
