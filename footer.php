@@ -80,7 +80,7 @@ if (false === $footer_content) {
     </html>
     <?php
     $footer_content = ob_get_clean();
-    set_transient('my_theme_footer_content', $footer_content, 24 * HOUR_IN_SECONDS); // Stockage du contenu en transient pour 24 heures
+    set_transient('my_theme_footer_content', $footer_content, 24 * 3600); // Stockage du contenu en transient pour 24 heures
 }
 
 echo $footer_content;
